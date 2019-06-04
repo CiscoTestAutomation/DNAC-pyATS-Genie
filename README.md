@@ -1,3 +1,5 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/CiscoTestAutomation/DNAC-pyATS-Genie)
+
 # Cisco DNA Center Automation with pyATS | Genie
 
 This repository contains examples of how to get started with automating Cisco 
