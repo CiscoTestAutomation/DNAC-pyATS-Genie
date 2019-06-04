@@ -1,0 +1,18 @@
+TriggerShutNoShutInterface:
+    source:
+      class: dnac_trigger.TriggerShutNoShutInterface
+    devices: ['uut']
+    interface:
+    dnac_timeout:
+       max_time: 900
+       interval: 30
+
+TriggerUnconfigConfigDescriptionInterface:
+    source:
+      class: dnac_trigger.TriggerUnconfigConfigDescriptionInterface
+    devices: ['uut']
+    interface: GigabitEthernet1/0/38
+    description: Test
+    dnac_timeout:
+       max_time: 900
+       interval: 30

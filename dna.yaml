@@ -1,0 +1,45 @@
+devices:
+  dnac:
+      type: 'dnac'
+      os: 'dnac'
+      alias: 'dnac'
+      tacacs:
+          login_prompt: "login:"
+          password_prompt: "Password:"
+          username: "admin"
+      passwords:
+          tacacs: admin
+          enable: admin
+          line: admin
+      connections:
+          rest:
+              class: rest.connector.Rest
+              ip : "172.28.97.216"
+              username: admin
+              password: Cisco123
+              port: 443
+              verify: False
+      custom:
+          abstraction:
+              order: [os]
+  CAMPUS-Access1:
+      type: 'router'
+      os: "iosxe"
+      alias: 'uut'
+      tacacs:
+          login_prompt: 'Username:'
+          password_prompt: 'Password:'
+          username: cisco
+      passwords:
+          tacacs: cisco
+          enable: cisco
+          line: cisco
+      connections:
+          defaults:
+            class: 'unicon.Unicon'
+          cli:
+              protocol: telnet
+              ip: "172.28.97.155"
+      custom:
+          abstraction:
+              order: [os]
